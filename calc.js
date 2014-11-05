@@ -31,8 +31,7 @@ var fibonacci = function(){
                 	prev=result;                    
 
 		}
-	}
-}
+	}	
 var output = document.getElementById('res');
 output.innerHTML = 'the number is ' + result;
 }
