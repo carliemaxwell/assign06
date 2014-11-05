@@ -38,3 +38,4 @@ output.innerHTML = 'the number is ' + result;
 }
 var button = document.getElementById('run');
 button.onclick = fibonacci;
+
