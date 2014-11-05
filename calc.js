@@ -1,56 +1,40 @@
-<!doctype html>
-<html>
-<head>
-	<title>Triangular calculator</title>
-<body>
-<script>
 var triangular = function(n){
-var input = document.getElementByID("num").value;
+var input = document.getElementById("number").value;
 var n = parseInt(input);
 var result=0
         for(var count=1; count<=n; count++){
                 result=count+result;
 }
-alert(result);
+var output = document.getElementById('result');
+output.innerHTML = 'the number is ' + result;
 }
-</script>
-</body>
-............button code?
-</head>
-</html>
+var button = document.getElementById('runner');
+button.onclick = triangular;
 
-<!doctype html>
-<html>
-<head>
-	<title> Fibonacci Calculator </title>
-</head>
-<body>
-<script>
+ 
 var fibonacci = function(){
-	var input = document.getElementByID("num").value;
+	var input = document.getElementById("num").value;
 	var n = parseInt(input);
+	var result;
         if(n==0){
-                return 0;
-}
+                result = 0;
+	}
         if(n<=2){
-                return 1;
-}
-else{
-var result;
-var prev=1;
-var twoback=0;
-        for(count=1; count<n; count++){
-                result=prev+twoback;
-                twoback=prev;
-                prev=result;                    
+                result = 1;
+	}
+	else{
+		var prev=1;
+		var twoback=0;
+        	for(count=1; count<n; count++){
+                	result=prev+twoback;
+                	twoback=prev;
+                	prev=result;                    
 
+		}
+	}
 }
+var output = document.getElementById('res');
+output.innerHTML = 'the number is ' + result;
 }
-alert(result);
-}                               
-</body>
-................button code?
-</script>
-</html>
-
-
+var button = document.getElementById('run');
+button.onclick = fibonacci;
